@@ -15,8 +15,8 @@
     "pipeline": "./bin/akamai-pipeline",
     "akamai-pl": "./bin/akamai-pipeline",
     "akamai-pd": "./bin/akamai-pipeline",
-    "property-manager": "./bin/akamai-pipeline",
-    "snippets": "./bin/akamai-snippets"
+    "property-manager": "./bin/akamai-property-manager",
+    "snippets": "./bin/akamai-property-manager"
   },
   "config": {
     "env": "dev"
