@@ -1,6 +1,6 @@
 {
   "name": "cli-promotional-deployment",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=6.13.4"
@@ -15,20 +15,8 @@
     "pipeline": "./bin/akamai-pipeline",
     "akamai-pl": "./bin/akamai-pipeline",
     "akamai-pd": "./bin/akamai-pipeline",
+    "property-manager": "./bin/akamai-pipeline",
     "snippets": "./bin/akamai-snippets"
-  },
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "eslint": "^4.12.0",
-    "eslint-plugin-node": "^5.2.1",
-    "js-beautify": "^1.8.8",
-    "jsdoc": "^3.6.3",
-    "jsdoc-to-markdown": "^5.0.3",
-    "mocha": "^4.0.1",
-    "nyc": "^14.1.1",
-    "pegjs": "^0.10.0",
-    "testdouble": "^3.8.2",
-    "webpack": "^4.41.3"
   },
   "config": {
     "env": "dev"
@@ -42,7 +30,7 @@
     "test-for-sonarqube": "nyc --report-dir=dist/coverage --reporter=lcov --reporter=text-lcov mocha --recursive tests",
     "jsdoc": "jsdoc -c jsdoc.config.json",
     "eslint": "eslint -c eslintrc.json index.js ./bin ./src",
-    "build": "npm run pegjs && npm run jsbeautify && npm run test-for-sonarqube && npm run eslint && npm run docs"
+    "build": "npm run pegjs"
   },
   "dependencies": {
     "ajv": "^6.10.2",
@@ -55,6 +43,7 @@
     "inquirer": "^6.2.0",
     "log4js": "^3.0.6",
     "moment": "^2.20.1",
+    "pegjs": "^0.10.0",
     "request": "^2.88.0",
     "request-debug": "^0.2.0",
     "underscore": "^1.9.1",
